@@ -1,6 +1,5 @@
 
-Openstack Python Examples
-=========================
+# Openstack Python Examples
 
 Work in progress...
 
@@ -11,8 +10,7 @@ you can use to find examples to point you in the right direction.
 This project also installs the most common command line clients so you can
 start playing around with OpenStack.
 
-Installation
-------------
+## Installation
 
 ```bash
 git clone https://github.com/ZettaIO/openstack-python-examples

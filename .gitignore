@@ -1,4 +1,6 @@
 /env/
+/.venv/
 *.pyc
-/.vagrant/
+__pycache__
 *openrc*
+.vscode

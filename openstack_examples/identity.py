@@ -41,11 +41,11 @@ def authenticate(output=False):
     We are scoping to a project, something you want to do in 99% of the use cases.
     """
     if output:
-        print "=== Authenticating: Project scoped ==="
-        print "OS_AUTH_URL", os.getenv('OS_AUTH_URL')
-        print "OS_USERNAME", os.getenv('OS_USERNAME')
-        print "OS_USER_DOMAIN_NAME", os.getenv('OS_USER_DOMAIN_NAME')
-        print "OS_PROJECT_DOMAIN_NAME", os.getenv('OS_PROJECT_DOMAIN_NAME')
+        print("=== Authenticating: Project scoped ===")
+        print("OS_AUTH_URL", os.getenv('OS_AUTH_URL'))
+        print("OS_USERNAME", os.getenv('OS_USERNAME'))
+        print("OS_USER_DOMAIN_NAME", os.getenv('OS_USER_DOMAIN_NAME'))
+        print("OS_PROJECT_DOMAIN_NAME", os.getenv('OS_PROJECT_DOMAIN_NAME'))
 
     return v3.Password(auth_url=os.getenv('OS_AUTH_URL'),
                        # Credentials
@@ -67,17 +67,17 @@ def get_client():
 
 def get_session_info(output=False):
     session = get_session(output=True)
-    print "=== Session Information ==="
-    print "Domain     :", session.auth.project_domain_name
-    print "Project ID :", session.get_project_id()
-    print "User ID    :", session.get_user_id()
-    print "Raw Token  :", session.get_token() 
+    print("=== Session Information ===")
+    print("Domain     :", session.auth.project_domain_name)
+    print("Project ID :", session.get_project_id())
+    print("User ID    :", session.get_user_id())
+    print("Raw Token  :", session.get_token())
     return {}
 
 
 def project_list():
     client = get_client()
-    print client.projects.list()
+    print(client.projects.list())
 
 
 def main():
